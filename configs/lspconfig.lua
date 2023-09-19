@@ -3,6 +3,7 @@ local on_attach = config.on_attach
 local capabilities = config.capabilities
 
 local lspconfig = require("lspconfig")
+local util = require("lspconfig/util")
 
 local function organise_imports()
   local params = {
@@ -24,7 +25,26 @@ lspconfig.tsserver.setup {
     }
   },
 }
-lspconfig.gopls.setup({})
+lspconfig.gopls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = {"gopls"},
+  filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+  settings = {
+    gopls = {
+      gofumpt = true,
+      completeUnimported = true,
+      usePlaceholders = true,
+      analyses = {
+        unusedparams = true,
+        shadow = true,
+        unusedwrite = true,
+        nilness = true,
+      }
+    }
+  }
+})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
