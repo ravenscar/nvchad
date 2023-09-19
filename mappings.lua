@@ -17,13 +17,13 @@ M.abc = {
     ["N"] = {"Nzzzv", opts = { remap = false }},
     ["<leader>hc"] = {
       function ()
-        require("nvchad_ui.tabufline").closeAllBufs()
+        require("nvchad.tabufline").closeAllBufs()
       end,
       "Close all buffers"
     },
     ["<leader>hx"] = {
       function ()
-        require("nvchad_ui.tabufline").closeAllBufs()
+        require("nvchad.tabufline").closeAllBufs()
         vim.cmd(':q')
         vim.cmd(':q')
       end,
