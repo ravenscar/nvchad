@@ -13,6 +13,12 @@ local function organise_imports()
   vim.lsp.buf.execute_command(params)
 end
 
+lspconfig.pyright.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"python"},
+})
+
 lspconfig.tsserver.setup {
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)

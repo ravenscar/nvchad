@@ -16,6 +16,10 @@ local plugins = {
     end
   },
   {
+    "christoomey/vim-tmux-navigator",
+    lazy = false
+  },
+  {
     "ThePrimeagen/harpoon",
     cmd = "Harpoon"
   },
@@ -66,6 +70,9 @@ local plugins = {
         "eslint-lsp",
         "js-debug-adapter",
         "typescript-language-server",
+        "pyright",
+        "mypy",
+        "ruff",
       },
     },
   },
