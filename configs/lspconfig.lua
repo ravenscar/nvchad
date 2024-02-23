@@ -13,6 +13,8 @@ local function organise_imports()
   vim.lsp.buf.execute_command(params)
 end
 
+lspconfig.ocamllsp.setup{}
+
 lspconfig.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities,
