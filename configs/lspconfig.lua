@@ -13,6 +13,10 @@ local function organise_imports()
   vim.lsp.buf.execute_command(params)
 end
 
+lspconfig.jsonls.setup{}
+
+lspconfig.zls.setup{}
+
 lspconfig.ocamllsp.setup{}
 
 lspconfig.pyright.setup({

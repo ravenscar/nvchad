@@ -1,3 +1,9 @@
+vim.filetype.add({
+  extension = {
+    ejs = 'embedded_template',
+  }
+})
+
 local plugins = {
   {
     "leoluz/nvim-dap-go",
@@ -85,6 +91,8 @@ local plugins = {
         "ruff",
         "ocaml-lsp",
         "gopls",
+        "zls",
+        "json-lsp"
       },
     },
   },

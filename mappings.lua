@@ -36,8 +36,16 @@ M.abc = {
         vim.cmd(':q')
         vim.cmd(':q')
       end,
-      "Close all buffers"
+      "Close all buffers and exit"
     },
+    ["<leader>hf"] = {
+      "<cmd> NvimTreeCollapse <CR>",
+      "Collapse NvimTree"
+    },
+    ["<leader>h"] = { "<cmd>cnext<CR>zz", "Forward qflist" },
+    ["<leader>;"] = { "<cmd>cprev<CR>zz", "Backward qflist" },
+    ["<leader>k"] = { "<cmd>lnext<CR>zz", "Forward location list" },
+    ["<leader>j"] = { "<cmd>lprev<CR>zz", "Backward location list" },
   }
 }
 
@@ -125,6 +133,36 @@ M.harpoon = {
         require("harpoon.ui").nav_file(4)
       end,
       "harpoon 4",
+    },
+    ["<leader>5"] = {
+      function()
+        require("harpoon.ui").nav_file(5)
+      end,
+      "harpoon 5",
+    },
+    ["<leader>6"] = {
+      function()
+        require("harpoon.ui").nav_file(6)
+      end,
+      "harpoon 6",
+    },
+    ["<leader>7"] = {
+      function()
+        require("harpoon.ui").nav_file(7)
+      end,
+      "harpoon 7",
+    },
+    ["<leader>8"] = {
+      function()
+        require("harpoon.ui").nav_file(8)
+      end,
+      "harpoon 8",
+    },
+    ["<leader>9"] = {
+      function()
+        require("harpoon.ui").nav_file(9)
+      end,
+      "harpoon 9",
     },
   },
 }
