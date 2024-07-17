@@ -80,6 +80,12 @@ local plugins = {
     end,
   },
   {
+    "nvim-telescope/telescope.nvim",
+    opts = function()
+       return require "custom.configs.telescope"
+    end
+  },
+  {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
@@ -95,6 +101,12 @@ local plugins = {
         "json-lsp"
       },
     },
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = function()
+      return require "custom.configs.nvimtree"
+    end,
   },
   {
     "nvim-tree/nvim-tree.lua",
