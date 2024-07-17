@@ -46,6 +46,18 @@ M.abc = {
     ["<leader>;"] = { "<cmd>cprev<CR>zz", "Backward qflist" },
     ["<leader>k"] = { "<cmd>lnext<CR>zz", "Forward location list" },
     ["<leader>j"] = { "<cmd>lprev<CR>zz", "Backward location list" },
+  },
+  c = {
+    ["<C-h>"] = {"<left>", opts = { remap = false }},
+    ["<C-j>"] = {"<down>", opts = { remap = false }},
+    ["<C-k>"] = {"<up>", opts = { remap = false }},
+    ["<C-l>"] = {"<right>", opts = { remap = false }},
+  },
+  i = {
+    ["<C-h>"] = {"<left>", opts = { remap = false }},
+    ["<C-j>"] = {"<down>", opts = { remap = false }},
+    ["<C-k>"] = {"<up>", opts = { remap = false }},
+    ["<C-l>"] = {"<right>", opts = { remap = false }},
   }
 }
 
